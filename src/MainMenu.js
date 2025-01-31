@@ -7,28 +7,28 @@ function MainMenu() {
     <div className="MainMenu">
       <div className="talents">
         <div className="talent">
-          <img src="path/to/instinct.jpg" alt="Инстинкт" />
+          <img src="/images/instinkt.jpg" alt="Инстинкт" />
           <h2>Инстинкт</h2>
           <Link to="/instinct">
             <button>Подробнее</button>
           </Link>
         </div>
         <div className="talent">
-          <img src="path/to/intellect.jpg" alt="Интеллект" />
+          <img src="/images/intellect.jpg" alt="Интеллект" />
           <h2>Интеллект</h2>
           <Link to="/intellect">
             <button>Подробнее</button>
           </Link>
         </div>
         <div className="talent">
-          <img src="path/to/fight.jpg" alt="Бой" />
+          <img src="/images/Boy.jpg" alt="Бой" />
           <h2>Бой</h2>
           <Link to="/fight">
             <button>Подробнее</button>
           </Link>
         </div>
         <div className="talent">
-          <img src="path/to/pricelist.jpg" alt="Прайс лист" />
+          <img src="/images/PriseList.jpg" alt="Прайс лист" />
           <h2>Прайс лист</h2>
           <Link to="/pricelist">
             <button>Подробнее</button>

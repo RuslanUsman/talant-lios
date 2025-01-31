@@ -1,27 +1,82 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './index.css';
-import MainMenu from './MainMenu';
-import Instinct from './Instinct';
-import Intellect from './Intellect';
-import Fight from './Fight';
-import PriceList from './PriceList';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import { init, mockTelegramEnv } from '@telegram-apps/sdk';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const parseInitData = (initDataRaw) => {
+  const params = new URLSearchParams(initDataRaw);
+  const user = JSON.parse(params.get('user'));
+  return {
+    user,
+    hash: params.get('hash'),
+    auth_date: params.get('auth_date'),
+    start_param: params.get('start_param'),
+    chat_type: params.get('chat_type'),
+    chat_instance: params.get('chat_instance'),
+  };
+};
+
+const initializeTelegramSDK = async () => {
+  try {
+    // Попытка инициализировать настоящее окружение Telegram
+    console.log("Инициализация окружения Telegram");
+    const miniApp = await init(); // Используем функцию init вместо initMiniApp
+    await miniApp.ready();
+  } catch (error) {
+    // В случае ошибки инициализируем фейковое окружение
+    console.error('Ошибка при инициализации Telegram:', error);
+
+    const initDataRaw = new URLSearchParams([
+      ['user', JSON.stringify({
+        id: 99281932,
+        first_name: 'Andrew',
+        last_name: 'Rogue',
+        username: 'rogue',
+        language_code: 'en',
+        is_premium: true,
+        allows_write_to_pm: true,
+      })],
+      ['hash', '89d6079ad6762351f38c6dbbc41bb53048019256a9443988af7a48bcad16ba31'],
+      ['auth_date', '1716922846'],
+      ['start_param', 'debug'],
+      ['chat_type', 'sender'],
+      ['chat_instance', '8428209589180549439'],
+    ]).toString();
+
+    mockTelegramEnv({
+      themeParams: {
+        accentTextColor: '#6ab2f2',
+        bgColor: '#17212b',
+        buttonColor: '#5288c1',
+        buttonTextColor: '#ffffff',
+        destructiveTextColor: '#ec3942',
+        headerBgColor: '#fcb69f',
+        hintColor: '#708499',
+        linkColor: '#6ab3f3',
+        secondaryBgColor: '#232e3c',
+        sectionBgColor: '#17212b',
+        sectionHeaderTextColor: '#6ab3f3',
+        subtitleTextColor: '#708499',
+        textColor: '#f5f5f5',
+      },
+      initData: parseInitData(initDataRaw),
+      initDataRaw,
+      version: '7.2',
+      platform: 'tdesktop',
+    });
+
+    console.log('Mock Telegram environment initialized');
+  }
+};
+
+// Инициализация SDK
+initializeTelegramSDK();
+
+const container = document.getElementById('root');
+const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainMenu />} />
-        <Route path="/instinct" element={<Instinct />} />
-        <Route path="/intellect" element={<Intellect />} />
-        <Route path="/fight" element={<Fight />} />
-        <Route path="/pricelist" element={<PriceList />} />
-      </Routes>
-    </Router>
+    <App />
   </React.StrictMode>
 );
-
-

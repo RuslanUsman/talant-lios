@@ -1,17 +1,19 @@
 {
   "name": "talant-app",
   "version": "0.1.0",
+  "homepage": "https://RuslanUsman.github.io/talant-lios",
   "private": true,
   "dependencies": {
+    "@telegram-apps/sdk": "^3.1.3",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.4",
-    "react-scripts": "5.0.1",
-    "telegram-web-app": "^0.0.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
-    "deploy": "node gh-pages.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "web-vitals": "^4.2.4"
   }
 }
