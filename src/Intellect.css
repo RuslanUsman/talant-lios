@@ -1,0 +1,137 @@
+.Instinct {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+  }
+  
+  .talents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px; /* Промежуток между контейнерами */
+    justify-content: center;
+  }
+  
+  .talent {
+    text-align: center;
+    background-color: #1e1e1e; /* Цвет контейнера */
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box; /* Учитываем padding и border в ширине и высоте */
+  }
+  
+  .talent img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .talent h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #ffffff;
+  }
+  
+  .talent button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    animation: blink 3s infinite;
+    width: 100%; /* Кнопка занимает всю ширину контейнера */
+    box-sizing: border-box; /* Учитываем padding и border в ширине и высоте */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    overflow: hidden; /* Обрезаем текст, если он не помещается */
+    text-overflow: ellipsis; /* Добавляем многоточие, если текст не помещается */
+  }
+  
+  .talent:nth-child(1) button {
+    animation-delay: 0s;
+  }
+  
+  .talent:nth-child(2) button {
+    animation-delay: 1s;
+  }
+  
+  .talent:nth-child(3) button {
+    animation-delay: 2s;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+      background-color: #4CAF50; /* Зеленый цвет */
+      color: white;
+    }
+    50% {
+      opacity: 0;
+      background-color: #f44336; /* Красный цвет */
+      color: white;
+    }
+  }
+  
+  .talent-info {
+    text-align: center;
+  }
+  
+  .talent-info img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .talent-info h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #ffffff;
+  }
+  
+  .talent-info p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #cccccc;
+  }
+  
+  .talent-info button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .menu-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 600px) {
+    .talents {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  
+    .talent {
+      width: 100%;
+    }
+  
+    .talent-info img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
