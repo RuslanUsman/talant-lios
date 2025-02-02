@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/talant-lios/static/css/main.d65fcf6a.css",
-    "main.js": "/talant-lios/static/js/main.46d6324c.js",
+    "main.css": "/talant-lios/static/css/main.45847ea8.css",
+    "main.js": "/talant-lios/static/js/main.9200c3fa.js",
     "index.html": "/talant-lios/index.html",
-    "main.d65fcf6a.css.map": "/talant-lios/static/css/main.d65fcf6a.css.map",
-    "main.46d6324c.js.map": "/talant-lios/static/js/main.46d6324c.js.map"
+    "main.45847ea8.css.map": "/talant-lios/static/css/main.45847ea8.css.map",
+    "main.9200c3fa.js.map": "/talant-lios/static/js/main.9200c3fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.d65fcf6a.css",
-    "static/js/main.46d6324c.js"
+    "static/css/main.45847ea8.css",
+    "static/js/main.9200c3fa.js"
   ]
 }
