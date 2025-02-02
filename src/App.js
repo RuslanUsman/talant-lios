@@ -1,17 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainMenu from './MainMenu';
-import Instinct from './Instinct';
-import Intellect from './Intellect';
-import Fight from './Fight';
-import PriceList from './PriceList';
+import MainMenu from './components/MainMenu';
+import Instinct from './components/Instinct';
+import Intellect from './components/Intellect';
+import Fight from './components/Fight';
+import PriceList from './components/PriceList';
+import TalantLios from './components/TalantLios'; // Добавьте этот импорт
 import './App.css';
-import './Instinct.css';
-import './Intellect.css';
-import './MainMenu.css';
-import './Fight.css';
-import './PriceList.css';
-
 
 function App() {
   return (
@@ -23,6 +18,7 @@ function App() {
           <Route path="/intellect" element={<Intellect />} />
           <Route path="/fight" element={<Fight />} />
           <Route path="/pricelist" element={<PriceList />} />
+          <Route path="/talant-lios" element={<TalantLios />} /> {/* Добавьте этот маршрут */}
         </Routes>
       </div>
     </Router>
@@ -30,3 +26,4 @@ function App() {
 }
 
 export default App;
+

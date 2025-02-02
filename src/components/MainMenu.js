@@ -7,28 +7,28 @@ function MainMenu() {
     <div className="MainMenu">
       <div className="talents">
         <div className="talent">
-          <img src="/images/instinkt.jpg" alt="Инстинкт" />
+          <img src={`${process.env.PUBLIC_URL}/images/instinkt.jpg`} alt="Инстинкт" />
           <h2>Инстинкт</h2>
           <Link to="/instinct">
             <button>Подробнее</button>
           </Link>
         </div>
         <div className="talent">
-          <img src="/images/intellect.jpg" alt="Интеллект" />
+          <img src={`${process.env.PUBLIC_URL}/images/inellect.jpg`} alt="Интеллект" />
           <h2>Интеллект</h2>
           <Link to="/intellect">
             <button>Подробнее</button>
           </Link>
         </div>
         <div className="talent">
-          <img src="/images/Boy.jpg" alt="Бой" />
+          <img src={`${process.env.PUBLIC_URL}/images/Boy.jpg`} alt="Бой" />
           <h2>Бой</h2>
           <Link to="/fight">
             <button>Подробнее</button>
           </Link>
         </div>
         <div className="talent">
-          <img src="/images/PriseList.jpg" alt="Прайс лист" />
+          <img src={`${process.env.PUBLIC_URL}/images/PriseList.jpg`} alt="Прайс лист" />
           <h2>Прайс лист</h2>
           <Link to="/pricelist">
             <button>Подробнее</button>
@@ -36,12 +36,14 @@ function MainMenu() {
         </div>
       </div>
       <div className="additional-images">
-        <img src="/images/umList.jpg" alt="Дополнительное изображение 1" />
-        <img src="/images/teloList.jpg" alt="Дополнительное изображение 2" />
+        <img src={`${process.env.PUBLIC_URL}/images/umList.jpg`} alt="Дополнительное изображение 1" />
+        <img src={`${process.env.PUBLIC_URL}/images/teloList.jpg`} alt="Дополнительное изображение 2" />
       </div>
     </div>
   );
 }
 
 export default MainMenu;
+
+
 

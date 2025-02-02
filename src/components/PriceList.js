@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Instinct.css';
+import './PriceList.css';
 
 const talents = [
-  { name: 'Ум', image: '/images/um.jpg', info: 'для фул прокачки ума Вам потребуется 29696 торговых тикетов, цена 1 банки Микстуры ума 29 тикетов или 20 очки талантов.' },
-  { name: 'Тело', image: '/images/telo.jpg', info: 'для фул прокачки тело Вам потребуется 40474 торговых тикетов, цена 1 банки Микстуры ума 59 тикетов или 30 очки талантов.' },
+  { name: 'Ум', image: `${process.env.PUBLIC_URL}/images/um.jpg`, info: 'для фул прокачки ума Вам потребуется 29696 торговых тикетов, цена 1 банки Микстуры ума 29 тикетов или 20 очки талантов.' },
+  { name: 'Тело', image: `${process.env.PUBLIC_URL}/images/telo.jpg`, info: 'для фул прокачки тело Вам потребуется 40474 торговых тикетов, цена 1 банки Микстуры ума 59 тикетов или 30 очки талантов.' },
   // Добавьте остальные таланты здесь
 ];
 
@@ -48,3 +48,4 @@ function PriceList() {
 }
 
 export default PriceList;
+

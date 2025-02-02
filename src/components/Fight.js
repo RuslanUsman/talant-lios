@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Instinct.css';
+import './Fight.css';
 
 const talents = [
-  { name: 'Ганстер', image: '/images/ganster.jpg', info: 'Информация о таланте: Убить 15 игроков с помощью холодного оружия.' },
-  { name: 'Возвращение', image: '/images/vozvracheniy.jpg', info: 'Информация о таланте: Убить 5 игроков после использования реаниматора или дефибриллятора в одном бою.' },
-  { name: 'Легкое снаряжение', image: '/images/legkoesnoregeniy.jpg', info: 'Информация о таланте: Убить 5 игроков будучи полностью голым.' },
-  { name: 'Точная наводка', image: '/images/tochnavodka.jpg', info: 'Информация о таланте: Убить 5 игроков выстрелом в голову.' },
+  { name: 'Ганстер', image: `${process.env.PUBLIC_URL}/images/ganster.jpg`, info: 'Информация о таланте: Убить 15 игроков с помощью холодного оружия.' },
+  { name: 'Возвращение', image: `${process.env.PUBLIC_URL}/images/vozvracheniy.jpg`, info: 'Информация о таланте: Убить 5 игроков после использования реаниматора или дефибриллятора в одном бою.' },
+  { name: 'Легкое снаряжение', image: `${process.env.PUBLIC_URL}/images/legkoesnoregeniy.jpg`, info: 'Информация о таланте: Убить 5 игроков будучи полностью голым.' },
+  { name: 'Точная наводка', image: `${process.env.PUBLIC_URL}/images/tochnavodka.jpg`, info: 'Информация о таланте: Убить 5 игроков выстрелом в голову.' },
   // Добавьте остальные таланты здесь
 ];
 
@@ -50,3 +50,4 @@ function Fight() {
 }
 
 export default Fight;
+

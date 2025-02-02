@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Instinct.css';
+import './Intellect.css';
 
 const talents = [
-  { name: 'Мото маньяк', image: 'path/to/selfdefense.jpg', info: 'Информация о таланте: Проехать 100 000 метров на любом транспорте.' },
-  { name: 'Непроходимая местность', image: 'path/to/endurance.jpg', info: 'Информация о таланте: Убить 2 монстра.' },
-  { name: 'Супермощный салдат', image: 'path/to/endurance.jpg', info: 'Информация о таланте Выносливость.' },
-  { name: 'Дистанционное управление', image: 'path/to/swimming.jpg', info: 'Информация о таланте Умение плавать.' },
+  { name: 'Мото маньяк', image: `${process.env.PUBLIC_URL}/images/moto.jpg`, info: 'Информация о таланте: Проехать 100 000 метров на любом транспорте.' },
+  { name: 'Непроходимая местность', image: `${process.env.PUBLIC_URL}/images/neprohodimestnost.jpg`, info: 'Информация о таланте: Убить 2 монстра.' },
+  { name: 'Супермощный салдат', image: `${process.env.PUBLIC_URL}/images/supersaldat.jpg`, info: 'Информация о таланте Выносливость.' },
+  { name: 'Дистанционное управление', image: `${process.env.PUBLIC_URL}/images/distanupravleniy.jpg`, info: 'Информация о таланте Умение плавать.' },
   // Добавьте остальные таланты здесь
 ];
 
@@ -50,3 +50,4 @@ function Intellect() {
 }
 
 export default Intellect;
+

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import { init, mockTelegramEnv } from '@telegram-apps/sdk';
 
+
 const parseInitData = (initDataRaw) => {
   const params = new URLSearchParams(initDataRaw);
   const user = JSON.parse(params.get('user'));
